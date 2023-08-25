@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript"
+        src="http://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=AnS7wcapEwnJ0nkysdhw4Mb0ZqcWHwjKa3NMsq9OR28JPZaYRpjuQQrGv1Fl__ez"
+        async defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    <h1>About The Restaurant</h1>
+    <p class="mx-5 px-5 text-justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita molestias
+        amet quasi nesciunt impedit
+        natus laboriosam consequatur? Aliquid necessitatibus aperiam eos. Officiis in nobis dolorum totam, velit
+        laudantium beatae. Commodi dicta in nihil. Id in sequi, odio, odit hic magni dolorem nulla quidem quos quod
+        ad quae perferendis laudantium maiores architecto veniam, ea rem at debitis expedita qui quis quisquam
+        laboriosam. Sed inventore laborum modi amet tempore ex maiores, laboriosam quas saepe officia, molestiae rem
+        dolore illo delectus vel error. Beatae, corporis fugiat nam excepturi laboriosam commodi voluptatem eius ex
+        quia, fuga velit officia eaque quod eveniet! Id culpa accusamus, dolores amet cupiditate, doloribus eos sit
+        labore quae totam delectus aut sunt molestiae excepturi ad consequuntur quas natus eaque tempore expedita
+        inventore iste minima, iure ex! Voluptate explicabo voluptatibus ab obcaecati earum quisquam doloremque
+        consequuntur nam atque tenetur, eligendi corrupti dolor sit minus! Nihil assumenda voluptates numquam
+        laudantium similique, repellendus error eos excepturi optio! Error enim illum repudiandae iusto eveniet
+        nostrum dolores consectetur reprehenderit ratione incidunt provident, impedit iste cupiditate temporibus
+        quos pariatur. Itaque quis necessitatibus, voluptas libero quae maiores repudiandae corrupti praesentium
+        labore fugiat nam illo est minima, veniam provident! Blanditiis, ex. Facere nemo impedit sequi quae laborum!
+        Cum quod maiores omnis quaerat eum iure officiis, et velit inventore, ab modi harum corporis ea beatae
+        consectetur corrupti. Similique quos rerum commodi distinctio voluptates at eaque! Sapiente earum eveniet,
+        animi quidem ipsa optio architecto culpa autem explicabo doloribus minima officiis quia, eaque error! Dicta
+        nostrum tempore odit mollitia blanditiis repellendus ratione? Alias consequatur quae ipsum ullam dolore,
+        quasi sequi officia? Accusamus tenetur sed sequi aliquid quia, sapiente debitis nostrum facere nesciunt
+        doloribus provident dicta, similique recusandae voluptatibus. Nam at, minima iure ducimus nihil commodi
+        consequatur, nulla omnis cupiditate, corporis voluptatem incidunt beatae laborum soluta quisquam
+        voluptatibus qui! Minima, voluptate distinctio.</p>
+
+    <div class="continer">
+        <div class="row justify-content-center"></div>
+        <div class="col-lg-8 col-md-8">
+            <div id="maps" style="position: relative; height: 400px; width: 100%;"></div>
+        </div>
+    </div>
+    <script>
+        window.addEventListener("load", function () {
+            navigator.geolocation.getCurrentPosition(function (pos) {
+                var map = new Microsoft.Maps.Map('#maps', {
+                    center: new Microsoft.Maps.Location(pos.coords.latitude, pos.coords.longitude),
+                });
+            })
+        })
+    </script>
+</body>
+
+</html>
